@@ -30,7 +30,7 @@ class Dashboard extends Component {
         super(props)
 
         this.state = initialState;
-        this.wordsToTypeArray = chooseRandom(words, 3);
+        this.wordsToTypeArray = chooseRandom(words, 100);
         this.correctWordsTyped = []
         // this.stopwatch = {
         //     minutes: 0,
@@ -41,7 +41,7 @@ class Dashboard extends Component {
 
     onRestart = () => {
         this.setState(initialState);
-        this.wordsToTypeArray = chooseRandom(words, 3);
+        this.wordsToTypeArray = chooseRandom(words, 100);
         this.correctWordsTyped = [];
         // this.stopwatch = {
         //     minutes: 0,
@@ -83,7 +83,7 @@ class Dashboard extends Component {
 
             let { wpm, cpm } = SpeedToData(this.correctWordsTyped, this.state.seconds, this.state.symbols);
             // console.log(wpm, cpm);
-            GameData.push({ wpm, cpm, date: moment().format('Do MMMM YYYY; h:mm:ss') })
+            GameData.push({ wpm, cpm, date: moment().format('Do MMMM YYYY; HH:mm:ss') })
             // console.log('gamedata', GameData);
             // clearInterval(this.millisecondsInterval);
             this.setState((prevState) => ({
