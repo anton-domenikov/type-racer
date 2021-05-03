@@ -13,7 +13,7 @@ import moment from 'moment';
 import './Dashboard.css'
 
 const words = require('an-array-of-english-words')
-console.log(words);
+// console.log(words);
 
 const initialState = {
     userInput: '',
@@ -70,8 +70,8 @@ class Dashboard extends Component {
                 this.correctWordsTyped.push(currentWord);
             }
         }
-        console.log(this.state);
-        console.log(this.correctWordsTyped);
+        // console.log(this.state);
+        // console.log(this.correctWordsTyped);
 
         this.onFinish(this.correctWordsTyped);
     }
@@ -82,16 +82,16 @@ class Dashboard extends Component {
             clearInterval(this.interval);
 
             let { wpm, cpm } = SpeedToData(this.correctWordsTyped, this.state.seconds, this.state.symbols);
-            console.log(wpm, cpm);
+            // console.log(wpm, cpm);
             GameData.push({ wpm, cpm, date: moment().format('Do MMMM YYYY; h:mm:ss') })
-            console.log('gamedata', GameData);
+            // console.log('gamedata', GameData);
             // clearInterval(this.millisecondsInterval);
             this.setState((prevState) => ({
                 ...prevState,
                 userInput: '',
                 finished: true
             }))
-            console.log(this.state);
+            // console.log(this.state);
         }
     }
 

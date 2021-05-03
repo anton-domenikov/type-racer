@@ -11,7 +11,7 @@ function FinishedDashboard(props) {
     // GameData.push({wpm, cpm, date: Date.now()})
     // console.log('gamedata',GameData);
 
-    console.log(props);
+    // console.log(props);
     return (
 
         <div className="typing-challenge">

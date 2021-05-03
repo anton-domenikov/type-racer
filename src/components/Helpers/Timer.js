@@ -1,5 +1,5 @@
 function Timer(props) {
-    console.log(props);
+    // console.log(props);
 
     let minutes = props.minutes;
     let seconds = props.seconds;
@@ -27,7 +27,7 @@ function Timer(props) {
             </div>
         )
     } else {
-        console.log(minutes);
+        // console.log(minutes);
         return (
             <div className="timer" style={{ color: "green" }}>
                 {('0' + minutes).slice(-2)}:{('0' + seconds).slice(-2)}
