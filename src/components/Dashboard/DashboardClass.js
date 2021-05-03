@@ -30,7 +30,7 @@ class Dashboard extends Component {
         super(props)
 
         this.state = initialState;
-        this.wordsToTypeArray = chooseRandom(words, 100);
+        this.wordsToTypeArray = chooseRandom(words, 3);
         this.correctWordsTyped = []
         // this.stopwatch = {
         //     minutes: 0,
@@ -41,7 +41,7 @@ class Dashboard extends Component {
 
     onRestart = () => {
         this.setState(initialState);
-        this.wordsToTypeArray = chooseRandom(words, 100);
+        this.wordsToTypeArray = chooseRandom(words, 3);
         this.correctWordsTyped = [];
         // this.stopwatch = {
         //     minutes: 0,
