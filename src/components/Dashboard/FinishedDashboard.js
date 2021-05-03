@@ -1,8 +1,8 @@
 import Logout from '../Logout/Logout';
-import Speed from '../Helpers/Speed';
-import SpeedToData from '../Helpers/SpeedToData';
+import { Speed } from '../Helpers/Speed';
+// import SpeedToData from '../Helpers/SpeedToData';
 import Timer from '../Helpers/Timer';
-import { GameData } from '../Data/SimpleData';
+// import { GameData } from '../Data/SimpleData';
 
 function FinishedDashboard(props) {
     // let { wpm, cpm } = SpeedToData(props.correctWordsTyped, props.state.seconds, props.state.symbols);

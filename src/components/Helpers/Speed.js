@@ -1,4 +1,4 @@
-export default (props) => {
+export const Speed = (props) => {
 
     if (props.symbols !== 0 && props.sec !== 0) {
         const wpm = (props.wordsTyped.length / (props.sec / 60));

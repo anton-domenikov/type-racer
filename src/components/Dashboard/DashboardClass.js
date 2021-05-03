@@ -1,12 +1,12 @@
 import { Component } from 'react';
 import Logout from '../Logout/Logout';
-import Speed from '../Helpers/Speed';
-import TextPreview from '../Helpers/TextPreview';
+import { Speed } from '../Helpers/Speed';
+import { TextPreview } from '../Helpers/TextPreview';
 import FinishedDashboard from './FinishedDashboard';
 import { chooseRandom } from '../Helpers/ChooseRandomWords';
 import Timer from '../Helpers/Timer';
 import Header from '../Header/Header';
-import SpeedToData from '../Helpers/SpeedToData';
+import { SpeedToData } from '../Helpers/SpeedToData';
 import { GameData } from '../Data/SimpleData';
 import moment from 'moment';
 
@@ -83,7 +83,7 @@ class Dashboard extends Component {
 
             let { wpm, cpm } = SpeedToData(this.correctWordsTyped, this.state.seconds, this.state.symbols);
             console.log(wpm, cpm);
-            GameData.push({ wpm, cpm, date: moment().format('Do MMMM YYYY; HH:MM:SS') })
+            GameData.push({ wpm, cpm, date: moment().format('Do MMMM YYYY; h:mm:ss') })
             console.log('gamedata', GameData);
             // clearInterval(this.millisecondsInterval);
             this.setState((prevState) => ({
@@ -109,8 +109,12 @@ class Dashboard extends Component {
                 })
             }, 1000);
             if (this.state.secondsToShow > 59) {
-                this.state.secondsToShow = 0;
-                this.state.minutesToShow += 1;
+                this.setState(prevState => ({
+                    ...prevState,
+                    secondsToShow: 0,
+                    minutesToShow: prevState.minutesToShow + 1,
+                }))
+
             }
             // this.stopwatch.minutes = this.state.minutesToShow;
             // this.stopwatch.seconds = this.state.secondsToShow;

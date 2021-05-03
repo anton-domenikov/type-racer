@@ -1,9 +1,8 @@
-
-export default (props) => {
+export const TextPreview = (props) => {
     console.log(props);
     const text = props.text;
     const wordsToDim = props.wordsToDim
-    const userInput = props.userInput
+    // const userInput = props.userInput
     // console.log(text);
 
     return (

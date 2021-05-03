@@ -1,4 +1,4 @@
-export default (wordsTyped, sec, symbols) => {
+export const SpeedToData = (wordsTyped, sec, symbols) => {
 
     if (symbols !== 0 && sec !== 0) {
         const wpm = (wordsTyped.length / (sec / 60));

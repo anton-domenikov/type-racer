@@ -1,10 +1,8 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Login from './components/Login/Login';
-import Logout from './components/Logout/Logout'
-import Header from './components/Header/Header';
 // import LoginHooks from './components/Login/LoginHooks';
-import Dashboard from './components/Dashboard/Dashboard';
+// import Dashboard from './components/Dashboard/notUsed/Dashboard';
 import DashboardClass from './components/Dashboard/DashboardClass';
 import PreviousGames from './components/Dashboard/PreviousGames';
 
