@@ -7,7 +7,7 @@ $ npm i       // npm install packages
 $ npm start   // run it locally
 ```
 
-### To change the number of words to be typed go to
+### To change the number of words that need to be typed go to:
 [https://github.com/anton-domenikov/type-racer/blob/master/src/components/Dashboard/DashboardClass.js#L33](https://github.com/anton-domenikov/type-racer/blob/master/src/components/Dashboard/DashboardClass.js#L33)
 [https://github.com/anton-domenikov/type-racer/blob/master/src/components/Dashboard/DashboardClass.js#L44](https://github.com/anton-domenikov/type-racer/blob/master/src/components/Dashboard/DashboardClass.js#L44)
 
